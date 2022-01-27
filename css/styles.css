@@ -8,6 +8,17 @@ body{
     color: #fff;
 }
 
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* to create flexible images  */
+img {
+    max-width: 100%;
+    display: block;
+}
+
 header,
 footer{
     background-color: #115194;
@@ -33,4 +44,26 @@ nav{
     background-color: #b0d892;
     padding: 128px 0;
     margin-bottom: 24px;
+    /* one key item for RWD is % based containers which gives us fluid layouts  */
+    /* width: calc(100%/3);  */
+    width: 32%; /*do the calc method or do it as a fixed % amount*/
 }
+
+/* fluid layouts are great for mobile devices , but on desktop we will switch to fixed width container */
+@media screen and (min-width: 1300px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    .container{
+        width: 1700px;
+    }
+}
+
+/* The three key things for responsive website:
+1. Fluid containers (upto a point)
+2. Media Queries
+3. Flexiable Images  */
